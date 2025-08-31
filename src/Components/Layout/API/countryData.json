@@ -1,0 +1,67 @@
+{
+    "countryFacts": [
+        {
+            "id": 1,
+            "countryName": "India",
+            "capital": "New Delhi",
+            "population": 1428627663,
+            "interestingFacts": "Has the world’s largest democracy. Home to the Kumbh Mela, visible from space during peak gatherings."
+        },
+        {
+            "id": 2,
+            "countryName": "United States",
+            "capital": "Washington, D.C.",
+            "population": 339996564,
+            "interestingFacts": "Has the world’s largest economy by nominal GDP. Alaska has more coastline than the rest of the U.S. combined."
+        },
+        {
+            "id": 3,
+            "countryName": "China",
+            "capital": "Beijing",
+            "population": 1411750000,
+            "interestingFacts": "The Great Wall is over 21,000 km long. Invented paper, gunpowder, compass, and printing."
+        },
+        {
+            "id": 4,
+            "countryName": "Brazil",
+            "capital": "Brasília",
+            "population": 203080756,
+            "interestingFacts": "Home to ~60% of the Amazon rainforest. Has the world’s largest carnival in Rio de Janeiro."
+        },
+        {
+            "id": 5,
+            "countryName": "Nigeria",
+            "capital": "Abuja",
+            "population": 223804632,
+            "interestingFacts": "Africa’s most populous country. Nollywood is one of the world’s largest film industries."
+        },
+        {
+            "id": 6,
+            "countryName": "China",
+            "capital": "Beijing",
+            "population": 1444216107,
+            "interestingFacts": "The Great Wall of China is visible from space on rare occasions."
+        },
+        {
+            "id": 7,
+            "countryName": "France",
+            "capital": "Paris",
+            "population": 67407241,
+            "interestingFacts": "The Eiffel Tower in Paris was once the tallest man-made structure in the world."
+        },
+        {
+            "id": 8,
+            "countryName": "Russia",
+            "capital": "Moscow",
+            "population": 1324216107,
+            "interestingFacts": "Russia is the largest country in the world, more than 17 million square kilometers."
+        },
+        {
+            "id": 9,
+            "countryName": "Egypt",
+            "capital": "Cairo",
+            "population": 104258327,
+            "interestingFacts": "The Pyramids of Giza are one of the Seven Wonders of the Ancient World."
+        }
+    ]
+}
