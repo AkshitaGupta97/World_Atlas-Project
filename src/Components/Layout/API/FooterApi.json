@@ -1,0 +1,18 @@
+
+[
+  {
+    "icon": "MdPlace",
+    "title": "Find us",
+    "details": "Delhi, India"
+  },
+  {
+    "icon": "IoCallSharp",
+    "title": "Call us",
+    "details": "9898787890"
+  },
+  {
+    "icon": "TbMailPlus",
+    "title": "Mail us",
+    "details": "abc@gmail.com"
+  }
+]

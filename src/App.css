@@ -46,8 +46,8 @@ button {
   border: none;
   text-transform: unset;
   transition: all 0.3s ease-in-out;
-  background-color: rgb(108, 106, 106);
-  color: rgb(246, 127, 9);
+  background-color: rgb(40, 39, 39);
+  color: rgb(6, 108, 149);
   border-radius: 1.4rem;
   border-width: 0.1rem;
   margin-top: 1.6rem;
@@ -225,7 +225,7 @@ nav ul {
 .container-card {
   position: relative;
   border: 2px solid transparent;
-  background: linear-gradient(71deg, #312037, #594b63, #442b4c);
+  background: linear-gradient(71deg, #161018, #17131b, #302434);
   background-clip: padding-box;
   border-radius: 45px;
   padding: 40px;
@@ -247,4 +247,129 @@ nav ul {
   font-size: 16px;
   max-width: 470px;
 }
+.bg-yellow-box {
+  position: relative;
+}
+.bg-yellow-box::after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -2px;
+  content: "";
+  z-index: -1;
+  border-radius: 45px;
+}
+.bg-yellow-box::after {
+  background: linear-gradient(71deg, #8a5858, #afa220, #110e0e);
+}
+/* ------------------ 
+contact us page 
+--------------- */
 
+.section-contact {
+  margin: 1rem auto;
+
+  & hr {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 100%;
+    max-width: 50rem;
+
+    & input,
+    & textarea {
+      font-family: "urbanist";
+      background-color: #000;
+      font-size: 1.6rem;
+      color: #fff;
+      outline: none;
+      border: 0.1rem solid rgba(255, 255, 255, 0.4);
+      padding: 1.2rem 1.6rem;
+      border-radius: 0.3rem;
+    }
+  }
+}
+/* footer CSS  */
+
+.footer-contact {
+  height: 10rem;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+
+  & .icon {
+    color: #3a4ed5;
+    font-size: 3.6rem;
+
+    & .icon:nth-child(2) {
+      rotate: 90deg;
+    }
+  }
+}
+
+.footer-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  & p {
+    font-size: 1.5rem;
+    color: #757575;
+  }
+
+  & p:first-child {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.footer-menu {
+  & ul {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+
+.copyright-area {
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a {
+  color: #3a4ed5;
+  margin-left: 0.6rem;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a {
+  color: #3a4ed5;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
