@@ -3,6 +3,8 @@ import { IoCallSharp } from "react-icons/io5";
 import { MdPlace } from "react-icons/md";
 import { TbMailPlus } from "react-icons/tb";
 
+import {NavLink} from "react-router-dom"
+
 export const Footers = () => {
 
     // we have created this footerIcon because, the icons in json is a componenets,
@@ -18,9 +20,9 @@ export const Footers = () => {
             <div className="container grid-three-cols">
                 {
                     footerContact.map((currData, idx) => {
-                        const{icon, title, details} = currData;
+                        const { icon, title, details } = currData;
                         return (
-                            <div className='footer-contact'>
+                            <div className='footer-contact' key={idx}>
                                 <div className="icon">{footerIcon[icon]}</div>
                                 <div className="footer-contact-text">
                                     <p>{title}</p>

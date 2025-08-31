@@ -302,12 +302,14 @@ contact us page
 
 .footer-contact {
   height: 10rem;
-  display: flex;
   gap: 2.4rem;
   align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+
 
   & .icon {
-    color: #3a4ed5;
+    color: #be20b3;
     font-size: 3.6rem;
 
     & .icon:nth-child(2) {
@@ -322,7 +324,7 @@ contact us page
   gap: 0.6rem;
 
   & p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #757575;
   }
 
@@ -333,43 +335,7 @@ contact us page
   }
 }
 
-.footer-menu {
-  & ul {
-    display: flex;
-    justify-content: end;
-  }
-}
-
-ul {
-  margin: 0px;
-  padding: 0px;
-}
 .footer-section {
   background: #151414;
   position: relative;
-}
-
-.copyright-area {
-  background: #202020;
-  padding: 25px 0;
-}
-.copyright-text p {
-  margin: 0;
-  font-size: 14px;
-  color: #878787;
-}
-.copyright-text p a {
-  color: #3a4ed5;
-  margin-left: 0.6rem;
-}
-.footer-menu li {
-  display: inline-block;
-  margin-left: 20px;
-}
-.footer-menu li:hover a {
-  color: #3a4ed5;
-}
-.footer-menu li a {
-  font-size: 14px;
-  color: #878787;
 }
