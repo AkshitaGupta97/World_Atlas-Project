@@ -4,24 +4,34 @@ import { About } from './Pages/About'
 import { Contact } from './Pages/Contact'
 import { Country } from './Pages/Country'
 import { Home } from './Pages/Home'
+import { AppLayout } from './Components/Layout/AppLayout'
+import { ErrorPage } from './Pages/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path:'/',
-    element: <Home />
-  },
-  {
-    path:'about',
-    element: <About />
-  },
-  {
-    path:'country',
-    element: <Country />
-  },
-  {
-    path:'contact',
-    element: <Contact />
-  },
+    element: <AppLayout />,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path:'/',
+        element: <Home />
+      },
+      {
+        path:'about',
+        element: <About />
+      },
+      {
+        path:'country',
+        element: <Country />
+      },
+      {
+        path:'contact',
+        element: <Contact />
+      }
+    ]
+  }
+
 ])
 
 
@@ -30,7 +40,7 @@ function App() {
   
   return(
     <>
-    return <RouterProvider router={router}></RouterProvider>
+     <RouterProvider router={router}></RouterProvider>
     </>
   )
 

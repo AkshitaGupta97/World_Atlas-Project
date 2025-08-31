@@ -1,5 +1,7 @@
 export const Country = () => {
     return (
-        <div></div>
+        <div>
+            <h2>Country</h2>
+        </div>
     )
 }
