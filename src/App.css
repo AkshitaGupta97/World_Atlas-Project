@@ -412,6 +412,7 @@ country Card
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3.2rem;
+  padding: 2rem;
 
   & .container-card {
     padding: 0.4rem 1rem;
@@ -434,10 +435,7 @@ country Card
     color: rgba(255, 255, 255, 0.8);
     padding: 0.6rem 2.4rem;
     border-radius: 5rem;
-    -webkit-border-radius: 5rem;
-    -moz-border-radius: 5rem;
-    -ms-border-radius: 5rem;
-    -o-border-radius: 5rem;
+    margin-top: 1rem;
     font-family: "urbanist";
     font-size: 1.5rem;
     font-weight: bold;
@@ -490,6 +488,11 @@ country Card
   .grid--cols {
     grid-template-columns: 1fr;
   }
+
+  .section-searchFilter {
+    flex-direction: column;
+  }
+
 }
 
 /* //Loader  */
