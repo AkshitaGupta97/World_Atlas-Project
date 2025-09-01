@@ -22,19 +22,33 @@ export const Country = () => {
         })
     }, [])
 
-    console.log(search, filter);
-    
+   // console.log(search, filter);  
     if (isPending) return <Loader />
+
+    const SearchFilterFun = (cntry) => {
+        if(search){
+            return cntry.name.common.toLowerCase().includes(search.toLowerCase());
+        }
+        return cntry;
+    }
+
+    const filterRegion = (cntry) => {
+        if(filter === 'all') return cntry;
+        return cntry.region === filter;
+    }
+         
+    const filterCountries = countries.filter((country) => SearchFilterFun(country) && filterRegion(country))
 
     return (
 
         <>
             <h1 className="country-heading">Country List</h1>
             <section className="country-section">
-                <SearchFilter  search={search} setSearch={setSearch} filter={filter} setFilter={setFilter}/>
+                <SearchFilter  search={search} setSearch={setSearch} 
+                filter={filter} setFilter={setFilter} countries={countries} setCounteries={setCounteries}/>
                 <ul className="grid grid-four-cols">
                     {
-                        countries.map((currCountry, idx) => {
+                        filterCountries.map((currCountry, idx) => {
                             return (
                                 <CountryCard country={currCountry} key={idx} />
                             )
