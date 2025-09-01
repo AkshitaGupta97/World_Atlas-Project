@@ -6,32 +6,36 @@ import { CountryCard } from "../Components/Layout/UI/CountryCard";
 
 export const Country = () => {
 
-    const [isPending, startTransition] =  useTransition();
+    const [isPending, startTransition] = useTransition();
     const [countries, setCounteries] = useState([])
-    
+
     useEffect(() => {
-        startTransition(async() => {
+        startTransition(async () => {
             const res = await getCountryData();
-           // console.log(res);
-        
-                setCounteries(res.data)
-           
+            // console.log(res);
+
+            setCounteries(res.data)
+
         })
     }, [])
 
-    
-    if(isPending) return <Loader />
+
+    if (isPending) return <Loader />
     return (
-        <section className="country-section">
-            <ul className="grid grid-four-cols">
-                {
-                    countries.map((currCountry, idx) => {
-                        return (
-                            <CountryCard country={currCountry} key={idx}/>
-                        )
-                    })
-                }
-            </ul>
-        </section>
+
+        <>
+            <h1 className="country-heading">Country List</h1>
+            <section className="country-section">
+                <ul className="grid grid-four-cols">
+                    {
+                        countries.map((currCountry, idx) => {
+                            return (
+                                <CountryCard country={currCountry} key={idx} />
+                            )
+                        })
+                    }
+                </ul>
+            </section>
+        </>
     )
 }
