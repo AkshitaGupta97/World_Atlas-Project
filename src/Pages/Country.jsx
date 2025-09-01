@@ -3,11 +3,14 @@ import { useEffect } from "react"
 import { getCountryData } from "../Components/Layout/API/PostApi";
 import { Loader } from "../Components/Layout/UI/Loader";
 import { CountryCard } from "../Components/Layout/UI/CountryCard";
+import { SearchFilter } from "../Components/Layout/UI/SearchFilter";
 
 export const Country = () => {
 
     const [isPending, startTransition] = useTransition();
     const [countries, setCounteries] = useState([])
+    const [search, setSearch] = useState()
+    const [filter, setFilter] = useState('all')
 
     useEffect(() => {
         startTransition(async () => {
@@ -19,13 +22,16 @@ export const Country = () => {
         })
     }, [])
 
-
+    console.log(search, filter);
+    
     if (isPending) return <Loader />
+
     return (
 
         <>
             <h1 className="country-heading">Country List</h1>
             <section className="country-section">
+                <SearchFilter  search={search} setSearch={setSearch} filter={filter} setFilter={setFilter}/>
                 <ul className="grid grid-four-cols">
                     {
                         countries.map((currCountry, idx) => {
