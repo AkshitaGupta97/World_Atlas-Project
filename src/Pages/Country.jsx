@@ -8,17 +8,19 @@ export const Country = () => {
 
     const [isPending, startTransition] =  useTransition();
     const [countries, setCounteries] = useState([])
-
-    if(isPending) return <Loader />
     
     useEffect(() => {
         startTransition(async() => {
             const res = await getCountryData();
            // console.log(res);
-            setCounteries(res)
+        
+                setCounteries(res.data)
+           
         })
     }, [])
 
+    
+    if(isPending) return <Loader />
     return (
         <section className="country-section">
             <ul className="grid grid-four-cols">
