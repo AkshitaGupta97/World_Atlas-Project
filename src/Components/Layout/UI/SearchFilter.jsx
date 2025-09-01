@@ -26,7 +26,7 @@ export function SearchFilter({ filter, setFilter, search, setSearch, countries, 
 
     return (
         <section className="section-searchFilter container">
-            <input type="text" placeholder="search" value={search} onChange={handleInputChange} />
+            <input className="searchIn" type="text" placeholder="search" value={search} onChange={handleInputChange} />
 
             <div>
                 <button onClick={() => sortCountry('asc')}>Asc..</button>
